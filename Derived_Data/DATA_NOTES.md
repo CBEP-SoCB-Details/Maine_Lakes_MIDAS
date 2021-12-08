@@ -3,7 +3,7 @@
 ## Initial Geospatial Data
 ### Lake Centroids and MIDAS Numbers
 The file `doc.kml` was extracted from the file `lakes_and_ponds.kmz`
-by changing is extension to `.zip`, and unzipping in Windows.  We
+by changing its extension to `.zip`, and unzipping in Windows.  We
 discarded the graphic file giving the point symbol for lake centroids.
 
 The python (3) script `DataParserLakes.py` scans that `.kml` file and extracts
@@ -60,7 +60,7 @@ We could correct some inconsistencies by copying geospatial data from other
 sources:  
 *  Runaround Pond, North Yarmouth / New Gloucester was not matched.  The pond (a 
    narrow reservoir) was not included in the NHD Waterbody layer, but it
-   was in NHD Area layer. We Polygon copied from `CB_NHDArea` and added to
+   was in the NHD Area layer. We Polygon copied from `CB_NHDArea` and added to
    `CB_Ponds_MIDAS`.  
 *  Clark's Pond, South Portland, MIDAS 5638.  Polygon copied from `CB_NHDArea` and
    added to `CB_Ponds_MIDAS`.  
@@ -99,10 +99,10 @@ Finally, we joined the attribute table based on MIDAS numbers with the
 CB_Lakes attribute table, and saved the joined table as `CB_Ponds_MIDAS_Final`
 (a shapefile). We deleted several attributes, leaving each pond with the
 following attributes derived from the CB_Lakes data:
-*  name    (a Long Name that includes the Pond Name, teh MIDAS NUmber, and the Town Name)
+*  Name    (a Long Name that includes the Pond Name, the MIDAS Number, and the Town Name)
 *  Longitude
 *  Latitude
-*  Name_1  (The Name pof the Pond itself)
+*  Name_1  (The Name of the Pond itself)
 *  Town
 *  MIDAS_Numb
 *  Elevation
@@ -112,7 +112,7 @@ We merged some polygons that share MIDAS numbers and are part of single
 lake basins. This involved the following steps:
 
 1.  Little Sebago Lake, MIDAS has two points in the original `KML` file, but
-    they correspond to the two major basins of the lake,a nd are part of one
+    they correspond to the two major basins of the lake, and are part of one
     polygon in the NHD data source.  
 2.  Sebago Lake has four points in the original `KML` file.  One of these is a
     tiny side basin of Sebago Lake, isolated by a road.  We merged it into the
@@ -122,7 +122,7 @@ lake basins. This involved the following steps:
     it.)  
 3.  Otter Pond #1 is a small pond near the southwest corner of Sebago Lake that
     is divided by a road. We merged the two polygons into a multi-polygon.  
-4.  Rich Millpond, to the west of Sebago Lake is a nother small pond apparently 
+4.  Rich Millpond, to the west of Sebago Lake is another small pond apparently 
     divided by a road or causeway.  We merged the two sub-basins into a
     multi-polygon.
 
