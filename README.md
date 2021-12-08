@@ -14,7 +14,7 @@ Online metadata describes the MIDAS numbers as follows:
 Geospatial data on MIDAS numbers for Maine lakes and ponds used to be
 available from the Maine Office of GIS.  MeOGIS's successor in providing
 state-level geospatial data, the Maine Geolibrary, no longer provides 
-a dLMaine lAkes data layer with MIDAS numbers, instead pointing users
+a Maine Lakes data layer with MIDAS numbers, instead pointing users
 to the National Hydrography Database (NHD) for all hydrographic features,
 but the NHD does not contain MIDAS numbers.
 
